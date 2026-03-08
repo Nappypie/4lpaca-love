@@ -28,24 +28,6 @@ local FastTween = TweenInfo.new(0.05);
 local VSlowTween = TweenInfo.new(0.5,Enum.EasingStyle.Quint);
 local Encryption = {};
 
-if typeof(game) == 'table' or typeof(LocalPlayer) == 'table' or typeof(CoreGui) == 'table' or typeof(writefile) == 'table' or typeof(VSlowTween) == 'table' or typeof(Mouse) == 'table' then
-	return {"env logger is not allow"};
-end;
-
-local issucc,read = pcall(function()
-	return getmetatable(ManualTween);
-end);
-
-if issucc then
-	local call_test = pcall(function()
-		return read();
-	end);
-
-	if call_test then
-		return {'sybao'};
-	end;
-end;
-
 NeverLose.RandomString = LPH_NO_VIRTUALIZE(function()
 	return string.rep(string.char(math.random(1,7)),math.random(1,4))..string.rep(string.char(math.random(1,7)),math.random(1,4))..string.rep(string.char(math.random(1,7)),math.random(1,4))..string.rep(string.char(math.random(1,7)),math.random(1,4))..string.rep(string.char(math.random(1,7)),math.random(1,4))..string.rep(string.char(math.random(1,7)),math.random(1,4))..string.rep(string.char(math.random(1,7)),math.random(1,4))..string.rep(string.char(math.random(1,7)),math.random(1,4))..string.rep(string.char(math.random(1,7)),math.random(1,4))..string.rep(string.char(math.random(1,7)),math.random(1,4))..string.rep(string.char(math.random(1,7)),math.random(1,4));
 end);
