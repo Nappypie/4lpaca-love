@@ -200,13 +200,14 @@ Label:AddOption(<number (Opsional)>)
 ```
 Usage:
 ```lua
+local Label = Section:AddLabel("Enabled");
 Label:AddToggle({
 	Default = false,
 	Callback = print;
 	Flag = "Ragebot",
 })
 
-local LabelOption = EnabledRage:AddOption();
+local LabelOption = Label:AddOption();
 LabelOption:AddLabel("Force Shoot"):AddToggle({
 	Default = false,
 	Callback = print,
